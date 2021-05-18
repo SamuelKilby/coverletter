@@ -6,9 +6,11 @@ public static void main(String[] args) {
 		String job;
 		String company;
 		String xp = new String("");
-		String x = new String("temp");
+		String x = new String("");
 		String y;
+		String z = new String("");
 		String type;
+		String remote;
 		String compliment = new String("");
 		Scanner scan = new Scanner(System.in);
 
@@ -24,9 +26,8 @@ public static void main(String[] args) {
 		// System.out.println(y.equals("n"));
 		if (y.equals("n"))
 		{
-			System.out.println("General compliment regarding company");
+			System.out.println("General compliment regarding company + '. '");
 			compliment = scan.nextLine();
-			compliment = compliment.concat(". ");
 			type = " at ";
 		}
 		else
@@ -52,7 +53,7 @@ public static void main(String[] args) {
 				xp = xp.concat("I have the most experience with Java from my introduction to"
 				+ " computer science 1 & 2, data structures and algorithms, and discrete"
 				+ " structures courses at UNCC as well as my own personal uses, like a"
-				+ " a cover letter generator. ");
+				+ " cover letter generator. ");
 				// System.out.println(xp);
 			}
 			else if (x.equals("c"))
@@ -86,6 +87,64 @@ public static void main(String[] args) {
 			
 		}
 		
+		System.out.println("a = Python\nb = Ruby & Rails\nc = C/C++\n"
+				+ "d = Microsoft Office\ne = Windows\nf = Mac");
+				while (z != "x")
+				{
+					z = scan.nextLine();
+					if (z.equals("a"))
+					{
+						xp = xp.concat("In my information visualization course at UNCC I gained"
+								+ " experience in Python. ");
+						// System.out.println(xp);
+					}
+					else if (z.equals("b"))
+					{
+						xp = xp.concat("In my software engineering course, I also gained experience"
+								+ " with Ruby and Ruby on Rails for our semester project. ");
+						// System.out.println(xp);
+					}
+					else if (z.equals("c"))
+					{
+						xp = xp.concat("Between my introduction to computer architecture course and"
+								+ " my introduction to computer networks course, I gained experience"
+								+ " with C and C++. ");
+						// System.out.println(xp);
+					}
+					else if (z.equals("d"))
+					{
+						xp = xp.concat("I have been using Microsoft Office for several years and"
+								+ " Google's copycat software programs both in college and in"
+								+ " volunteer work. ");
+						// System.out.println(xp);
+					}
+					else if (z.equals("e"))
+					{
+						xp = xp.concat("I have been exposed to the Windows operating systems for years"
+								+ ", both in courses and out-of-school personal use. ");
+						// System.out.println(xp);
+					}
+					else if (z.equals("f"))
+					{
+						xp = xp.concat("Over the years, in both primary school and volunteer work, I have utilized Mac"
+								+ " computers to complete tasks. ");
+						// System.out.println(xp);
+					}
+					else
+					{
+						z = "x";
+					}
+					
+				}
+		
+		System.out.println("Remote? y/n");
+		remote = scan.nextLine();
+		if (remote.equals("y"))
+		{
+			xp = xp.concat("My time in my last few semesters at UNCC and several"
+			+ " online courses gave me experience working and communicating remotely.");
+		}
+		
 		String cover = new String("Dear Hiring Manager,\n\nThank you for this opportunity"
 		+ " of " + job + type + company + ". I am a recent graduate from the University"
 		+ " of North Carolina at Charlotte. I have a bachelor's of science in computer"
@@ -95,6 +154,9 @@ public static void main(String[] args) {
 		+ " gain new skills. For that alone, I am highly interested. " + compliment
 		+ "Please contact me if you have any questions or concerns.\n\nGod bless,\nSamuel Kilby");
 		
+		System.out.println(cover);
+	}	
+}
 		// switch (x) {
 		// 	case x = "a":
 				
@@ -134,8 +196,3 @@ public static void main(String[] args) {
 		// 		" fields in the industry. " + compliment + ". Please "
 		// 		+ "contact me if you have any questions or concerns."
 		// 		+ "\n \nGod bless,\nSamuel Kilby";
-		
-		System.out.println(cover);
-	}
-	
-}
